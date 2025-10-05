@@ -11,6 +11,7 @@ const Courses = () => {
 
 
   return (
+
     <section className="course">
         <motion.h1 className="course-header-text"
         initial={{y: 100, opacity: 0}}
@@ -32,9 +33,16 @@ const Courses = () => {
       </div>
 
       <div className="course-items">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
         {courseData[activeCourse].dataCourse.map((course) => (
-            <Card key={course.id} image={course.image} studentsimg={course.studentsimg} students={course.students} date={course.date} header={course.header} description={course.description} price={course.price} priceTwo={course.priceTwo}/>
+            <motion.div key={course.id}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.4 }}
+        layout>
+                <Card key={course.id} image={course.image} studentsimg={course.studentsimg} students={course.students} date={course.date} header={course.header} description={course.description} price={course.price} priceTwo={course.priceTwo}/>
+            </motion.div>
         ))}
         </AnimatePresence>
       </div>
