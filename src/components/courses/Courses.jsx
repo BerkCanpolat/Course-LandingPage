@@ -1,11 +1,13 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import "./courses.css";
 import { useState } from "react";
-import leagues from "../../utils/data";
+import courseData from "../../utils/data";
+import Card from "./Card";
+import CourseBtn from "./CourseBtn";
 
 const Courses = () => {
 
-    const [activeLeague, setActiveLeague] = useState("superlig");
+    const [activeCourse, setActiveCourse] = useState("allprogramme");
 
 
   return (
@@ -19,21 +21,22 @@ const Courses = () => {
         }}>Popular Courses</motion.h1>
 
        <div className="course-select">
-        {Object.keys(leagues).map((leagueKey) => (
-          <button
+        {Object.keys(courseData).map((leagueKey) => (
+          <CourseBtn
             key={leagueKey}
-            onClick={() => setActiveLeague(leagueKey)}
-            className={`league-button ${activeLeague === leagueKey ? "active" : ""}`}
-          >
-            {leagueKey.toUpperCase()}
-          </button>
+            label={courseData[leagueKey].label}
+            active={activeCourse === leagueKey}
+            onClick={() => setActiveCourse(leagueKey)}
+          />
         ))}
       </div>
 
-      <div>
-        {leagues[activeLeague].map((team) => (
-          <p key={team.id}>{team.name}</p>
+      <div className="course-items">
+        <AnimatePresence mode="wait">
+        {courseData[activeCourse].dataCourse.map((course) => (
+            <Card key={course.id} image={course.image} studentsimg={course.studentsimg} students={course.students} date={course.date} header={course.header} description={course.description} price={course.price} priceTwo={course.priceTwo}/>
         ))}
+        </AnimatePresence>
       </div>
 
 
@@ -42,3 +45,4 @@ const Courses = () => {
 }
 
 export default Courses
+
