@@ -6,10 +6,11 @@
     background-color: var(--bg-main);
     transition: all .5s ease;
     padding: 1.5rem 0;
+    z-index: 5;
 }
 
 .scrollbar {
-    background-color: red;
+    background-color: whitesmoke;
     padding: 1.3rem 0;
 }
 

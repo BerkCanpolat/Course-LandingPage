@@ -4,6 +4,7 @@ import logo from "../../../public/logo.png";
 import MyButton from "./Button";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const menuItems = ["Home","Careers","Blog","About Us"]
 
@@ -26,7 +27,14 @@ const Header = () => {
     }, []);
 
   return (
-    <header className={`header ${scrolled ? "scrollbar" : ""}`}>
+    <motion.header className={`header ${scrolled ? "scrollbar" : ""}`}
+    initial={{y: "-2rem", opacity: 0}}
+    animate={{y: 0, opacity: 1}}
+    transition={{
+        duration: .5,
+        type: "linear",
+        ease: "easeIn"
+    }}>
         <div className="container header-wrapper">
         <a className="header__logo" href="#">
             <img src={logo} alt="logo" />
@@ -45,7 +53,7 @@ const Header = () => {
             <MyButton type="signup">singup</MyButton>
         </div>
         </div>
-    </header>
+    </motion.header>
   )
 }
 
