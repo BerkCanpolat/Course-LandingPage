@@ -1,0 +1,147 @@
+.slider-header {
+    text-align: center;
+    color: var(--green);
+    font-size: 3rem;
+    margin-block: 3.5rem;
+}
+
+.slider-sub {
+    text-align: center;
+    line-height: 1.5rem;
+    color: gray;
+}
+
+.slider-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 60rem;
+    background-color: #fff;
+    margin-top: 5rem;
+}
+
+.slider-card__img {
+    position: relative;
+}
+
+.slider-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-card__price {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    background-color: var(--white);
+    padding: .5rem .8rem;
+    border-radius: 1rem;
+}
+
+.slider-card__price .new-price {
+    color: var(--orange);
+    font-weight: bold;
+    margin-right: .4rem;
+}
+
+.slider-card__price .old-price {
+    color: gray;
+    text-decoration: line-through;
+    font-size: .9rem;
+}
+
+.slider-card__left {
+    flex: 50%;
+}
+
+.slider-card__right {
+    flex: 75%;
+    padding: 0 1.5rem;
+}
+
+.slider-card__date {
+    color: gray;
+}
+
+.slider-card__title {
+    color: var(--green);
+    margin-block: 1rem;
+}
+
+.slider-card__desc {
+    margin-block-end: 2.5rem;
+    color: gray;
+    line-height: 1.5rem;
+}
+
+.slider-card__students {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+}
+
+.slider-card__students span {
+    margin-left: .5rem;
+}
+
+.slider-card__students img:first-child {
+    margin-left: 0;
+}
+
+.slider-card__students img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: -10px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-horizontal {
+    overflow: visible;
+}
+
+.swiper-vertical {
+    overflow: visible;
+}
+
+.swiper {
+    overflow: visible !important;
+}
+
+.swiper-slide {
+  transition: transform 0.5s, filter 0.5s, opacity 0.5s;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.swiper-slide.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(2px);
+}
+
+.prev-slide, .next-slide {
+  filter: blur(2px);
+  opacity: 0.6;
+  transform: scale(0.9);
+}

@@ -5,6 +5,7 @@ import FeatureSection from './components/feature/FeatureSection'
 import GiftCardSection from './components/giftCardSection/GiftCardSection'
 import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
+import CourseSlider from './components/slider/CourseSlider'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Category/>
     <FeatureSection/>
     <GiftCardSection/>
+    <CourseSlider/>
     </>
   )
 }
