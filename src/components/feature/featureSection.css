@@ -67,3 +67,12 @@
   max-width: 400px;
   width: 100%;
 }
+
+@media (max-width: 568px) {
+
+.feature-section {
+  gap: 1.5rem;
+  margin-block: 3.5rem;
+  padding: 0 .5rem;
+}
+}

@@ -1,80 +1,112 @@
 .footer {
-    margin-block-start: 10rem;
-    background-color: var(--bg-main);
-    padding: 3rem 0;
+  margin-block-start: 10rem;
+  background-color: var(--bg-main);
+  padding: 3rem 0;
 }
 .footer-section {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .one-adres {
-    margin-block-start: 1.5rem;
+  margin-block-start: 1.5rem;
 }
 
 .one-adres p {
-    line-height: 1.3rem;
+  line-height: 1.3rem;
 }
 
-.one-adres, .one-tel, .one-time, .one-email {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-block: 1.5rem;
+.one-adres,
+.one-tel,
+.one-time,
+.one-email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 1.5rem;
 }
 
-.one-adres, .one-tel, .one-time, .one-email p {
-    color: var(--green);
+.one-adres,
+.one-tel,
+.one-time,
+.one-email p {
+  color: var(--green);
 }
 
-.two-list, .three-list {
-    list-style-type: none;
+.two-list,
+.three-list {
+  list-style-type: none;
 }
 
-.two-list li, .three-list li {
-    margin-block: 1.2rem;
-    color: var(--green);
+.two-list li,
+.three-list li {
+  margin-block: 1.2rem;
+  color: var(--green);
 }
 
-.two-header, .three-header {
-    margin-bottom: 2rem;
+.two-header,
+.three-header {
+  margin-bottom: 2rem;
 }
 
 .four-info {
-    margin-bottom: 1.5rem;
-    text-align: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .four-input {
-    background-color: #fff;
-    padding: .7rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 1rem;
-    width: 400px;
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  width: 400px;
 }
 
-
 .four-input input {
-    width: 50%;
-    border: none;
-    outline: none;
-    padding: .5rem 0;
-    color: black;
+  width: 50%;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0;
+  color: black;
 }
 
 .four-input input::placeholder {
-    color: gray;
-    opacity: 1;
+  color: gray;
+  opacity: 1;
 }
 
 .four-input a {
-    background-color: var(--green);
-    color: var(--white);
-    padding: 1rem 2.5rem;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 568px) {
+  .footer {
+    margin-block-start: 5rem;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .one-img img {
+    width: 10rem;
+  }
+
+  .four-input {
     border-radius: 1rem;
-    text-decoration: none;
+    width: 350px;
+    margin: 0 auto;
+  }
 }

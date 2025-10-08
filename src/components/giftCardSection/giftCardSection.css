@@ -65,10 +65,8 @@
 
 .giftcard-image {
     position: absolute;
-    /* bottom: 0; */
     top: -100px;
     right: -25px;
-
 }
 
 .giftcard-image img {
@@ -77,4 +75,20 @@
   height: auto;
   object-fit: contain;
   border-radius: 1rem;
+}
+
+@media (max-width: 568px) {
+    .giftcard-section {
+        padding: 1.5rem 2rem;
+}
+
+.giftcard-content h2 {
+  font-size: 1.9rem;
+}
+
+.giftcard-image img {
+    display: none;
+}
+
+
 }

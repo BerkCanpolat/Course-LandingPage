@@ -145,3 +145,66 @@
   opacity: 0.6;
   transform: scale(0.9);
 }
+
+@media (max-width: 568px) {
+    .slider-header {
+    font-size: 2rem;
+    margin-block: 3rem;
+}
+
+.slider-sub {
+    line-height: 1.3rem;
+}
+
+.slider-card {
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    max-width: 90%;
+    height: 35rem;
+  }
+
+  .slider-card__left {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+    .slider-card__img img {
+    width: 100%;
+    height: auto; 
+    border-bottom: 1px solid #eee;
+  }
+
+    .slider-card__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+  }
+
+   .slider-card__students {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .slider-card__students img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-left: -10px;
+}
+
+.slider-card__students span {
+    margin-left: .5rem;
+    font-size: .7rem;
+}
+
+.slider-card__desc {
+    margin-block-end: 1rem;
+    color: gray;
+    line-height: 1.2rem;
+    font-size: .9rem;
+}
+
+}

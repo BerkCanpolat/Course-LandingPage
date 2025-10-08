@@ -76,3 +76,79 @@
     color: var(--green);
     background-color: var(--white);
 }
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 568px) {
+
+    .header {
+    padding: 1.5rem .8rem;
+}
+
+    .header__logo img {
+        width: 8rem;
+    }
+
+    .header__nav .header__menu {
+        position: absolute;
+        top: 70%;
+        right: -100%;
+        background-color: #fff;
+        padding: 1.5rem 1rem;
+        border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.header__nav .header__menu.active {
+    right: 5%;
+}
+
+.header__auth {
+    position: absolute;
+    top: 265%;
+    padding: 1.5rem 1.8rem;
+    right: -100%;
+    background-color: #fff;
+    
+    flex-direction: column;
+    gap: .5rem;
+    font-size: .8rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.header__auth.active {
+    right: 5%;
+}
+
+.header__auth  .btn__signup{
+    width: 70px;
+    height: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__auth  .btn__login{
+    width: 70px;
+    height: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: block;
+}
+}
